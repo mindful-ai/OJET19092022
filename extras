@@ -1,0 +1,27 @@
+// VIEWMODEL
+        function AppViewModel() {
+
+            this.firstName = ko.observable("Ram");
+            this.lastName = ko.observable("Suryavanshi");
+            this.label = ko.observable("First Name Default: ");
+            this.c = "red"; // var c = red; let c = "red"; const c = "Red";
+
+            // KO Computed Property
+            this.fullName = ko.computed(function() {
+                this.label("First Name Default: ")
+                return this.firstName() + " " + this.lastName();    
+            }, this);
+
+            // More behavior
+            // Notice that, to read or write an observable's value, you call it as a function.
+            this.capitalizeLastName = function() {
+                var currentVal = this.lastName();        // Read the current value
+                this.lastName(currentVal.toUpperCase()); // Write back a modified value
+                this.label("First Name Capitalized: ");
+            };
+
+            
+        }
+
+        // Activates knockout.js
+        ko.applyBindings(new AppViewModel());
