@@ -41,7 +41,13 @@ Blank Application Bring-up
 5. Get oj-module markup into index.html
         <oj-module config="[[moduleAdapter.koObservableConfig]]" >
         </oj-module>
-6. In roocontroller.js include "ojmodulerouter-adapter", "ojmodule-element" in the define section and get the handle for ojmodulerouter-adapter -> 
+6. In roocontroller.js include "ojs/ojmodulerouter-adapter", "ojs/ojmodule-element" in the define section and get the handle for ojmodulerouter-adapter -> 
         ModuleRouterAdapter
 7. Create the moduleAdapter object in the rootViewModel
         this.moduleAdapter = new ModuleRouterAdapter(this.router);
+8. Create folders views, viewModels, models in js folder and add the html files and js files in views and viewModels respectively
+        views and viewModel files are created for the modules registered in the routes section in the rootcontroller
+
+The application is now ready for adding features
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
