@@ -38,3 +38,10 @@ Blank Application Bring-up
         Add 'rootcontroller' in the list of modules and get the handle
         Specify ko.applyBindings(rootvm, document.getElementById("routing-container")) in the init()
 4. Customize the tabs for the application in the rootcontroller.js (routes)
+5. Get oj-module markup into index.html
+        <oj-module config="[[moduleAdapter.koObservableConfig]]" >
+        </oj-module>
+6. In roocontroller.js include "ojmodulerouter-adapter", "ojmodule-element" in the define section and get the handle for ojmodulerouter-adapter -> 
+        ModuleRouterAdapter
+7. Create the moduleAdapter object in the rootViewModel
+        this.moduleAdapter = new ModuleRouterAdapter(this.router);
