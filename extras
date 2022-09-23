@@ -25,3 +25,16 @@
 
         // Activates knockout.js
         ko.applyBindings(new AppViewModel());
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Blank Application Bring-up
+
+1. Create rootcontroller.js in js folder
+2. Visit cook book and adopt the basic router (Core Router)
+        HTML section to index.html
+        JS section to rootcontroller.js
+        all required modules to define block in rootcontroller.js
+3. In root.js
+        Add 'rootcontroller' in the list of modules and get the handle
+        Specify ko.applyBindings(rootvm, document.getElementById("routing-container")) in the init()
+4. Customize the tabs for the application in the rootcontroller.js (routes)
